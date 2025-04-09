@@ -7,6 +7,7 @@ jobs:
     uses: ./.github/workflows/build.yaml
   test_cpp:
     name: Test executable
+    needs: build_cpp
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v4
