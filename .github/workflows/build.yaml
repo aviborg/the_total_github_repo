@@ -1,0 +1,12 @@
+name: Build 
+on: [push]
+
+jobs:
+ build_cpp:
+   name: Build C++
+   runs-on: ubuntu-latest
+   steps:
+     - name: Check out repository code
+       uses: actions/checkout@v4
+     - name: Build the file
+       run: g++ hello.cpp -o hello
